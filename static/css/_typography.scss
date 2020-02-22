@@ -1,0 +1,42 @@
+p {
+    margin-top: 15px;
+}
+
+p + p {
+    margin-top: 0px;
+}
+
+.intro {
+    h1 + p {
+        margin-top: 0px;
+    }
+}
+
+ul {
+    list-style-position: inside;
+
+    ul {
+        margin-bottom: 10px;
+        padding-left: 16px;
+    }
+
+    li[data-sesam-trigger] {
+        list-style: none;
+
+        &.sesam-show {
+            svg.feather {
+                transform: rotate(90deg);
+            }
+        }
+
+        strong svg.feather {
+            width: 18px;
+            vertical-align: -6px;
+            margin-right: 5px;
+        }
+    }
+
+    svg.feather {
+        transition: all .2s ease-in-out;
+    }
+}

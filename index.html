@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A new project</title>
+
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type='image/x-icon' href="https://lennertderyck.be/assets/images/LOGO_LDR_ZWART.ico"/>
+    <!-- <meta name="theme-color" content="#662B32">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#662B32">
+     -->
+
+    <!-- seo -->
+    <meta name="description" content="Some information about this project for SEO purposes">
+    <meta name="keywords" content="add, some, tags, for, SEO, purposes">
+    
+    <!--open graph-->
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="git.lennertderyck.be"/>
+    <meta property="og:title" content="a new project"/>
+    <!-- <meta property="og:image" content=""/> -->
+    
+    <!-- integrations -->
+    <!-- <script src="https://ce.lennertderyck.be/library/elements.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    
+    <!-- local assets -->
+    <link rel="stylesheet" href="./static/css/main.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="intro">
+                <h1>Header</h1>
+                <p><strong>Starting template</strong></p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <p>This template includes:</p>
+            <ul data-sesam-group="assets">
+                <li data-sesam-trigger="html" data-sesam-parent="assets"><strong><i data-feather="arrow-right"></i>index.html</strong>
+                    <ul data-sesam-target="html"  data-sesam-parent="assets">
+                        <li>All basic header stuff</li>
+                        <li>Meta tags
+                            <ul>
+                                <li>Responsiveness</li>
+                                <li>Favicon</li>
+                                <li>SEO description and tags</li>
+                                <li><a href="https://ogp.me/" target="_blank">Open Graph</a></li>
+                            </ul>
+                        </li>
+                        <li>All Bootstrap assets (comments)</li>
+                    </ul>
+                </li>
+                <li data-sesam-trigger="css" data-sesam-parent="assets"><strong><i data-feather="arrow-right"></i>CSS</strong> (<a href="https://sass-lang.com/" target="_blank" rel="noopener">Sass</a>)
+                    <ul data-sesam-target="css"  data-sesam-parent="assets">
+                        <li>_base.scss</li>
+                        <li>_sesam.scss</li>
+                        <li>_typography.scss</li>
+                        <li>main.scss: links all scss files and outputs one regular css file</li>
+                    </ul>
+                </li>
+                <li data-sesam-trigger="js" data-sesam-parent="assets"><strong><i data-feather="arrow-right"></i>JavaScript</strong>
+                    <ul data-sesam-target="js"  data-sesam-parent="assets">
+                        <li>main.js</li>
+                        <li>sesam.js: collapse stuff [beta] (the collapse you see on this page)</li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <small><strong>Footer</strong> &nbsp; | &nbsp; Template created by <a href="https://github.com/lennertderyck" target="_blank" rel="noopener">lennertderyck</a> – use this template on <a href="https://github.com/lennertderyck/start-template/generate" target="_blank" rel="noopener">GitHub</a></small>
+        </div>
+    </footer>
+
+    <!-- bootstrap scripts -->
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
+    
+    <!-- scripts -->
+    <script src="./static/js/main.js"></script>
+    <script src="./static/js/sesam.js"></script>
+    <script>
+        /* Initialize feather icons */
+        /* more info on https://feathericons.com/ and https://github.com/feathericons/feather#feather */
+        feather.replace()
+
+        /* Enable for bootstrap tooltips 👇 */
+        // $('[data-toggle="tooltip"]').tooltip()
+
+        /* Enable for bootstrap toasts 👇 */
+        // $('[data-toggle="tooltip"]').tooltip()
+    </script>
+</body>
+</html>
