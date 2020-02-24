@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    margin-top: 15px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 0 25px;
+}
+
+.hero {
+    position: relative;
+    
+    &-image {
+        object-fit: cover;
+        object-position: top;
+        opacity: 50%;
+    }
+    
+    &-body {
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        padding-bottom: ($spacingBase*-1)*5;
+        z-index: 1;
+        
+        h1 {
+            font-size: 64px;
+            line-height: 100%;
+            margin-bottom: $spacingBase;
+            @extend .font-scnd;
+            @extend .text-blue-500;
+        }
+        
+        h3 {
+            font-weight: 600;
+            @extend .text-blue-400;
+            @extend .font-main;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    @extend .font-main;
+}
+
+input {
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.ingredients-input {
+    position: relative;
+    box-shadow: 0px 3px 6px #00000029;
+    background-color: white;
+    margin-top: ($spacingBase*-1)*5;
+    margin-bottom: $spacingBase*5;
+    margin-left: ($spacingBase*3)*-1;
+    margin-right: ($spacingBase*3)*-1;
+    padding: $spacingBase*3;
+    border-radius: $bdRadius;
+    z-index: 2;
+    
+    &-wrapper {
+        position: relative;
+        // margin-bottom: $spacingBase*3;
+        
+        input[data-label="ingredientInput"] {
+            width: 100%;
+            height: $spacingBase*3;
+            padding: $spacingBase;
+            border-radius: $bdRadius2;
+            background-color: #F8F9FA;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            @extend .font-main;
+            @extend .text-blue-400;
+        }
+        
+        [data-label="addIngredient"] {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            height: 100%;
+        }
+    }
+}
+
+[data-label="ingredientsSelected"] {
+    margin: 0px;
+    padding: 0px;
+    
+    > li {
+        display: inline-block;
+        list-style: none;
+    }
+}
+
+[data-label="featuredIngredient"] {
+    font-weight: 300;
+}
+
+[data-label="relatedIngredients"] {
+    li {
+        display: inline-block;
+        padding: $spacingBase/2 $spacingBase;
+        margin-right: $spacingBase;
+        margin-bottom: $spacingBase;
+        border-radius: $bdRadius;
+        @extend .text-blue-400;
+        @extend .bg-blue-200;
+        @extend .font-main;
+        cursor: pointer;
+    }
+}
+
+[data-label="results"] {
+    .result {
+        display: flex;
+        margin-bottom: 30px;
+        @extend .bg-blue-200;
+        border-radius: $bdRadius;
+        
+        &-thumb {
+            width: 83px;
+            height: 83px;
+            // margin-right: 20px;
+            border-radius: $bdRadius 0px 0px $bdRadius;
+            overflow: hidden;
+            
+            &-img {
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+            }
+        }
+        
+        &-body {
+            padding: $spacingBase*2;
+        }
+                    
+        &-href {
+            display: block;
+            margin-bottom: 2px;
+            @extend .font-scnd;
+            @extend .text-blue-500;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        &-ingredients-list {
+            margin: 0px;
+            font-size: 80%;
+            font-weight: bold;
+            @extend .font-main;
+            @extend .text-blue-400;
+        }
+    }
+}

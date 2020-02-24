@@ -1,0 +1,38 @@
+$spacingBase: 10px;
+$bdRadiusBase: 2px;
+$bdRadius: $bdRadiusBase*3;
+$bdRadius2: $bdRadiusBase*2;
+
+$green500: #7B8858;
+$green400: #A9AF97;
+$green300: #D6D6D6;
+
+$blue500: #37687C;
+$blue400: #659CA5;
+$blue300: #B4D1D6;
+$blue200: #EFF5F7;
+
+.font-main {font-family: 'Averta';}
+.font-scnd {font-family: 'Blacker';}
+
+.bg-green-500 {background-color: $green500;}
+.bg-green-400 {background-color: $green400;}
+.bg-green-300 {background-color: $green300;}
+
+.text-green-500 {color: $green500;}
+.text-green-400 {color: $green400;}
+.text-green-300 {color: $green300;}
+
+.bg-blue-500 {background-color: $blue500;}
+.bg-blue-400 {background-color: $blue400;}
+.bg-blue-300 {background-color: $blue300;}
+.bg-blue-200 {background-color: $blue200;}
+
+.text-blue-500 {color: $blue500;}
+.text-blue-400 {color: $blue400;}
+.text-blue-300 {color: $blue300;}
+.text-blue-200 {color: $blue200;}
+
+.mb-1 {margin-bottom: $spacingBase*1;}
+.mb-2 {margin-bottom: $spacingBase*2;}
+.mb-3 {margin-bottom: $spacingBase*3;}
