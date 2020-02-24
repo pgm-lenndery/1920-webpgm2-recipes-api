@@ -9,7 +9,7 @@
     <!-- meta -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <link rel="shortcut icon" type='image/x-icon' href="https://lennertderyck.be/assets/images/LOGO_LDR_ZWART.ico"/> -->
+    <link rel="shortcut icon" type='image/x-icon' href="https://lennertderyck.be/assets/images/LOGO_LDR_ZWART.ico"/>
     <!-- <meta name="theme-color" content="#662B32">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="#662B32">
@@ -35,23 +35,24 @@
     <header class="hero">
         <div class="hero-body container">
             <h1>Ideas for<br>delicious meals</h1>
-            <h3>Just open your fridge</h3>
+            <h3>Just select an ingredient to start</h3>
         </div>
         <img class="hero-image" src="./static/images/hero.jpg" height="400px" width="100%" alt="">
     </header>
     <main>
         <div class="container">
             <div class="ingredients-input">
-                <div class="ingredients-input-wrapper">
-                    <input data-label="ingredientInput" type="text" placeholder="enter an ingredient" value="pepper">
-                    <button data-label="addIngredient">toevoegen</button>
+                <div class="ingredients-input-wrapper mb-3">
+                    <input data-label="ingredientInput" type="text" placeholder="enter an ingredient" value="">
+                    <button data-label="addIngredient">add to casserole</button>
                 </div>
+                <h4 class="text-green-400 font-scnd text-blue-400 mb-1">related ingredients</h4>
+                <ul data-label="relatedIngredients" class="font-main text-blue-300">no ingredients found</ul>
                 <!-- <ul data-label="ingredientsSelected"></ul> -->
             </div>
             <h2 class="text-green-500 font-scnd">here’s some inspiration for <strong data-label="featuredIngredient">...</strong></h2>
             <h4 class="text-green-400 mb-3">we found <span data-label="resultsCount"></span> recipes for this ingredient</h4>
-            <h4 class="text-green-400 font-scnd text-blue-400 mb-1">related ingredients</h4>
-            <ul data-label="relatedIngredients" class="mb-3 font-main text-blue-300">no ingredients found</ul>
+            
             <div class="flex-grid-wrapper row-item-1 row-item-md-2">
                 <div data-label="results" class="flex-grid"></div>
             </div>
