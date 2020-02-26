@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>A new project</title>
+    <title>Ideas for delicious meals</title>
 
     <!-- meta -->
     <meta charset="UTF-8">
@@ -21,7 +21,7 @@
     
     <!-- open graph -->
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="git.ahs.lennertderyck.be"/>
+    <meta property="og:url" content="git.ahs.lennertderyck.be/"/>
     <meta property="og:title" content="a new project"/>
     <!-- <meta property="og:image" content=""/> -->
     
@@ -42,27 +42,23 @@
     <main>
         <div class="container">
             <div class="ingredients-input">
-                <div class="ingredients-input-wrapper mb-3">
+                <div class="ingredients-input-wrapper">
                     <input data-label="ingredientInput" type="text" placeholder="enter an ingredient" value="">
-                    <button data-label="addIngredient">add to casserole</button>
+                    <button data-label="addIngredient">get some inspiration!</button>
                 </div>
-                <h4 class="text-green-400 font-scnd text-blue-400 mb-1">related ingredients</h4>
-                <ul data-label="relatedIngredients" class="font-main text-blue-300">no ingredients found</ul>
-                <!-- <ul data-label="ingredientsSelected"></ul> -->
+                <div class="hidden-content hidden mt-3">
+                    <h4 class="text-green-400 font-scnd text-blue-400 mb-1">related ingredients</h4>
+                    <ul data-label="relatedIngredients" class="font-main text-blue-300">no ingredients found</ul>
+                </div>
             </div>
+            
             <h2 class="text-green-500 font-scnd">here’s some inspiration for <strong data-label="featuredIngredient">...</strong></h2>
             <h4 class="text-green-400 mb-3">we found <span data-label="resultsCount"></span> recipes for this ingredient</h4>
-            
             <div class="flex-grid-wrapper row-item-1 row-item-md-2">
                 <div data-label="results" class="flex-grid"></div>
             </div>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <small><strong>Footer</strong> &nbsp; | &nbsp; Template created by <a href="https://github.com/lennertderyck" target="_blank" rel="noopener">lennertderyck</a> – use this template on <a href="https://github.com/lennertderyck/start-template/generate" target="_blank" rel="noopener">GitHub</a></small>
-        </div>
-    </footer>
 
     <!-- bootstrap scripts -->
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->

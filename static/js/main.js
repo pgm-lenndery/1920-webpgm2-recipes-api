@@ -9,7 +9,8 @@ const
     addIngredient = document.querySelector('[data-label="addIngredient"]'),
     resultsCount = document.querySelector('[data-label="resultsCount"]'),
     featuredIngredient = document.querySelector('[data-label="featuredIngredient"]'),
-    relatedIngredients = document.querySelector('[data-label="relatedIngredients"]');
+    relatedIngredients = document.querySelector('[data-label="relatedIngredients"]'),
+    hiddenContent = document.querySelectorAll('.hidden-content');
     // ingredientList = document.querySelector('[data-label="ingredientsSelected"]');
 
 let ingredientInput, ingredientArray = [], loadedResultsArray = [], relatedIngredientsArray = [];
@@ -29,6 +30,7 @@ function printResultsFromSuggested(input) {
     // call api
     triggerAPI(); 
     featuredIngredient.innerHTML = ingredientInput;
+    showContentWithResults();
 }
 
 function addIngredients() {
@@ -42,6 +44,7 @@ function addIngredients() {
     // call api
     triggerAPI(); 
     featuredIngredient.innerHTML = ingredientInput;
+    showContentWithResults();
     // ingredientArray.push(ingredientInput.toLowerCase()); // add ingredient from input to array
     // generateList(0); // add ingredient to html as <li>
 }
@@ -71,22 +74,28 @@ function triggerAPI() {
     fetchDataFromURl(`https://recipepuppyproxy.herokuapp.com/api/?i=${ingredientInput}`, 'json');
     console.log(`https://recipepuppyproxy.herokuapp.com/api/?i=${ingredientInput}`)
     
-    fetchDataFromURl(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredientInput}`, 'json');
-    console.log(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${ingredientInput}`)
+    fetchDataFromURl(`https://www.themealdb.com/api/json/v1/1/search.php?s=${ingredientInput}`, 'json');
+    console.log(`https://www.themealdb.com/api/json/v1/1/search.php?s=${ingredientInput}`)
 }
 
 function generateResults(result) {
     let maxTitleLength = 25;
     if (result.meals) {
         result.meals.forEach((i) => {
+            let ingredientsArray = [];
+            i.strIngredient1 !== null ? ingredientsArray.push(i.strIngredient1) : null;
+            i.strIngredient2 !== null ? ingredientsArray.push(' ' + i.strIngredient2) : null;
+            i.strIngredient3 !== null ? ingredientsArray.push(' ' + i.strIngredient3) : null;
+            i.strIngredient4 !== null ? ingredientsArray.push(' ' + i.strIngredient4) : null;
+            i.strIngredient5 !== null ? ingredientsArray.push(' ' + i.strIngredient5) : null;
+            i.strIngredient6 !== null ? ingredientsArray.push(' ' + i.strIngredient6) : null;
             loadedResultsArray.push({
                 title: i.strMeal,
                 thumb: i.strMealThumb,
-                ingredients: null,
+                ingredients: ingredientsArray,
                 href: `https://www.themealdb.com/meal/${i.idMeal}`,
                 source: 'themealdb'
             });
-            
         })
     } else {
         result.results.forEach((i) => {
@@ -105,7 +114,6 @@ function generateResults(result) {
         relatedIngredientsArray = relatedIngredientsArray.filter(function (i, index) {
             return relatedIngredientsArray.indexOf(i) === index;
         });
-        
     }
     
     loadedResultsArray.sort(function(a, b){return a-b});
@@ -139,4 +147,15 @@ function generateResults(result) {
     } else {
         relatedIngredients.innerHTML = 'no related ingredients to show';
     }
+}
+
+function showContentWithResults() {
+    hiddenContent.forEach(i => {
+        i.classList.remove('hidden');
+    })
+}
+function hideContentWithResults() {
+    hiddenContent.forEach(i => {
+        i.classList.add('hidden');
+    })
 }

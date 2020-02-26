@@ -73,8 +73,6 @@ input {
     background-color: white;
     margin-top: ($spacingBase*-1)*5;
     margin-bottom: $spacingBase*5;
-    margin-left: ($spacingBase*3)*-1;
-    margin-right: ($spacingBase*3)*-1;
     padding: $spacingBase*3;
     border-radius: $bdRadius;
     z-index: 2;
@@ -130,7 +128,7 @@ input {
 }
 
 [data-label="featuredIngredient"] {
-    font-weight: 300;
+    font-weight: 400;
 }
 
 [data-label="relatedIngredients"] {
@@ -191,3 +189,22 @@ input {
         }
     }
 }
+
+.hidden-content {
+    &.hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 576px) {}
+
+@media (min-width: 768px) {
+    .ingredients-input {
+        margin-left: ($spacingBase*3)*-1;
+        margin-right: ($spacingBase*3)*-1;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
